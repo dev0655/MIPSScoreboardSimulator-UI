@@ -6,6 +6,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs'
+import 'codemirror/mode/xml/xml';
+import 'codemirror/mode/htmlmixed/htmlmixed';
+import 'codemirror/mode/mipsasm/mipsasm';
+import 'src/assets/mipsasm/mipsasm'
+
 
 @NgModule({
   declarations: [
@@ -15,7 +22,9 @@ import { CodemirrorModule } from '@ctrl/ngx-codemirror';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    CodemirrorModule
+    CodemirrorModule,
+    BrowserAnimationsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
