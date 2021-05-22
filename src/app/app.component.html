@@ -44,7 +44,7 @@
 ></ngx-codemirror>
  <br/><br/>
       <div style="margin-left: 1cm;">
-             <button href="#" class="btn btn-lg  btn-outline-success" style="width: 30%;">EXECUTE</button>&nbsp;&nbsp;
+             <button type="submit" (click)="execute()" class="btn btn-lg  btn-outline-success" style="width: 30%;">EXECUTE</button>&nbsp;&nbsp;
              <button type="submit" (click)="step()" class="btn btn-lg btn-outline-primary" style="width: 30%;">STEP</button> &nbsp;&nbsp;
              <button type="submit" (click)="reset()" class="btn btn-lg btn-outline-danger" style="width: 30%;">RESET</button>
      
@@ -61,78 +61,78 @@
 <td style="width: 5%;">
   
 <div>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R0 --> {{data.R0}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R0 --> {{array[0]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R1 --> {{data.R1}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R1 --> {{array[1]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R2 --> {{data.R2}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R2 --> {{array[2]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R3 --> {{data.R3}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R3 --> {{array[3]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R4 --> {{data.R4}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R4 --> {{array[4]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R5 --> {{data.R5}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R5 --> {{array[5]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R6 --> {{data.R6}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R6 --> {{array[6]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R7 --> {{data.R7}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R7 --> {{array[7]}}</button>
 </div>
 </td>
   <td style="width: 5%;">
     <div>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R8 --> {{data.R8}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R8 --> {{array[8]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R9 --> {{data.R9}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R9 --> {{array[9]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R10 --> {{data.R10}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R10 --> {{array[10]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R11 --> {{data.R11}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R11 --> {{array[11]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R12 --> {{data.R12}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R12 --> {{array[12]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R13 --> {{data.R13}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R13 --> {{array[13]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R14 --> {{data.R14}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R14 --> {{array[14]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R15 --> {{data.R15}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R15 --> {{array[15]}}</button>
 </div>
 </td>
 <td style="width: 5%;">
   <div>
-    <button class="btn btn-lg btn-primary" style="width: 100%;">R16 --> {{data.R16}}</button>
+    <button class="btn btn-lg btn-primary" style="width: 100%;">R16 --> {{array[16]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R17 --> {{data.R17}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R17 --> {{array[17]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R18 --> {{data.R18}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R18 --> {{array[18]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R19 --> {{data.R19}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R19 --> {{array[19]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R20 --> {{data.R20}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R20 --> {{array[20]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R21 --> {{data.R21}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R21 --> {{array[21]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R22 --> {{data.R22}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R22 --> {{array[22]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R23 --> {{data.R23}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R23 --> {{array[23]}}</button>
 </div>
 </td>
   <td style="width: 5%;">
     <div>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R24 --> {{data.R24}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R24 --> {{array[24]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R25 --> {{data.R25}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R25 --> {{array[25]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R26 --> {{data.R26}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R26 --> {{array[26]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R27 --> {{data.R27}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R27 --> {{array[27]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R28 --> {{data.R28}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R28 --> {{array[28]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R29 --> {{data.R29}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R29 --> {{array[29]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R30 --> {{data.R30}}</button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R30 --> {{array[30]}}</button>
   <br/>  <br/>
-  <button class="btn btn-lg btn-primary" style="width: 100%;">R31 --> {{data.R31}} </button>
+  <button class="btn btn-lg btn-primary" style="width: 100%;">R31 --> {{array[31]}} </button>
     </div>
     
   </td>
@@ -157,634 +157,148 @@
   <th>Byte 14</th>
 </tr>
   <tr>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+    <td>0</td>
+
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i]}}</td>
+  
+  
 </tr>
 <tr>
   <td>15</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+15]}}</td>
 </tr>
 <tr>
   <td>30</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+30]}}</td>
 </tr>
 <tr>
   <td>45</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+45]}}</td>
 </tr>
 <tr>
   <td>60</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+60]}}</td>
 </tr>
 <tr>
   <td>75</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+75]}}</td>
 </tr>
 <tr>
   <td>90</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+90]}}</td>
 </tr>
 <tr>
   <td>105</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+105]}}</td>
 </tr>
 <tr>
   <td>120</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+120]}}</td>
 </tr>
 <tr>
   <td>135</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+135]}}</td>
 </tr>
 <tr>
   <td>150</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+150]}}</td>
 </tr>
 <tr>
   <td>165</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+165]}}</td>
 </tr>
 <tr>
   <td>180</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+180]}}</td>
 </tr>
 <tr>
   <td>195</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+195]}}</td>
 </tr>
 <tr>
   <td>210</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+210]}}</td>
 </tr>
 <tr>
   <td>225</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+225]}}</td>
 </tr>
 <tr>
   <td>240</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+240]}}</td>
 </tr>
 <tr>
   <td>255</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+255]}}</td>
 </tr>
 <tr>
   <td>270</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+270]}}</td>
 </tr>
 <tr>
   <td>285</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+285]}}</td>
 </tr>
 <tr>
   <td>300</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+300]}}</td>
 </tr>
 <tr>
   <td>315</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+315]}}</td>
 </tr>
 <tr>
   <td>330</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+330]}}</td>
 </tr>
 <tr>
   <td>345</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+345]}}</td>
 </tr>
 <tr>
   <td>360</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+360]}}</td>
 </tr>
 <tr>
   <td>375</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+375]}}</td>
 </tr>
 <tr>
   <td>390</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+390]}}</td>
 </tr>
 <tr>
   <td>405</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+405]}}</td>
 </tr>
 <tr>
   <td>420</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+420]}}</td>
 </tr>
 <tr>
   <td>435</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+435]}}</td>
 </tr>
 <tr>
   <td>450</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+450]}}</td>
 </tr>
 <tr>
   <td>465</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+465]}}</td>
 </tr>
 <tr>
   <td>480</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+480]}}</td>
 </tr>
 <tr>
   <td>495</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+495]}}</td>
 </tr>
 <tr>
   <td>510</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
-  <td>0</td>
+  <td *ngFor='let in of counter(15) ;let i = index'>{{memorylist[i+510]}}</td>
+  
 </tr>
   
 </mat-tab>

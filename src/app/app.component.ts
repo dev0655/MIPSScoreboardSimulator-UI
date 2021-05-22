@@ -6,9 +6,10 @@ import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import * as CodeMirror from 'codemirror';
 
 
-import { HttpClient } from '@angular/common/http';
+
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Host } from './host';
-import { Registors } from 'src/models/registors';
+import { Response } from 'src/models/response';
 import 'codemirror/mode/xml/xml';
 import 'src/assets/mipsasm/mipsasm';
 import 'codemirror/addon/selection/active-line';
@@ -25,7 +26,17 @@ export class AppComponent implements AfterViewInit, OnDestroy{
   private codeEditor:any;
    
   
-  code:string ='ADD 3, 1, 1 \nADD 1, 2, 3\nMUL 4, 2, 3\nDIV 5, 4, 3';
+  dataList: any=[];
+  errorlist: any=[];
+  memorylist: Number[]=[];
+ 
+  
+  code:string ='LI R1, 8\nLI R2, 312\nLI R4, 256\nADD R5, R1, R2\nHLT';
+  
+
+
+
+
 
   options: any = {
     lineNumbers: true,
@@ -34,15 +45,9 @@ export class AppComponent implements AfterViewInit, OnDestroy{
     styleActiveLine: { nonEmpty: true }
   };
   title = 'MIPSSimulator';
-  registors: Registors[]=[new Registors(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0),
-    new Registors(1,1,2,3,4,5,5,6,7,8,9,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1)
-    ,new Registors(634,154,26,36,96,57,5,6,7,8,9,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1),
-    new Registors(35,14,236,35,54,657,5,6,7,8,9,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1),
-    new Registors(3553,4355,263,36,96,57,5,6,7,8,9,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1),
-    new Registors(345,3554,454,45,96,57,5,6,7,8,9,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0,1)];
   
   position: number=0;
-  data:Registors= this.registors[this.position];
+  array: any=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
   constructor(private http: HttpClient) {
     
   }
@@ -57,23 +62,43 @@ export class AppComponent implements AfterViewInit, OnDestroy{
 
 step(){
   this.position= this.position+1;
-  this.data = this.registors[this.position];
+  this.array= this.dataList[this.position-1];
   const editor = this.codeEditor.codeMirror;
    const doc = editor.getDoc();
-   doc.setCursor(this.position);
+   doc.setCursor(this.array[32]);
 }
 reset(){
   this.position= 0;
-  this.data = this.registors[this.position];
+  this.array=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+  this.dataList =[];
+  this.errorlist=[];
+  this.memorylist=[];
   const editor = this.codeEditor.codeMirror;
    const doc = editor.getDoc();
    doc.setCursor(this.position);
 }
 execute(){
+  let params = new HttpParams();
+params = params.append('configFile', this.code);
+  this.http.get<Response>("http://localhost:8080/MIPSSimulator/api/executeSimulator", {params: params}).subscribe(
+      data=>{
+        
+        console.log("Here"+ data);
+        this.dataList=data.result;
+        this.memorylist=data.memory;
+        this.errorlist=data.err;
+        console.log(this.memorylist[0]);
+        
+      }
+      
+    );
+    
 
 }
 
- 
+counter(i: number) {
+  return new Array(i);
+}
  
 
 
