@@ -12,7 +12,7 @@ CodeMirror.defineMode("mipsasm", function(config, parserConfig) {
    
     // long list of standard functions from lua manual
     var builtins = wordRE([
-      "add","addi","addiu","addu","and","andi","beq","bgez","bgezal","bgtz",
+      "sd","li","add","addi","addiu","addu","and","andi","beq","bgez","bgezal","bgtz",
       "blez","blt","bltz","bltzal","bne","div","divu","j","jal","jr","lb","lui",
       "lw","mult","mul","multu","noop","or","ori","sb","sll", "sllv", "slt", "slti",
       "sltiu", "sltu", "sra", "srl", "srlv", "sub", "subu", "sw", "xor", "xori"
@@ -26,7 +26,7 @@ CodeMirror.defineMode("mipsasm", function(config, parserConfig) {
       "\$t3","\$t4","\$t5","\$t6","\$t7","\$s0","\$s1","\$s2","\$s3","\$s4","\$s5","\$s6",
       "\$s7","\$t8","\$t9","\$k0","\$k1","\$gp","\$sp","\$fp","\$ra"
     ]);
-    var keywords = wordRE([".data",".text" ]);
+    var keywords = wordRE([".data",".text","hlt" ]);
   
     function normal(stream, state) {
       var ch = stream.next();
